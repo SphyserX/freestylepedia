@@ -143,6 +143,7 @@
     "placeholder": "Search a trick"
   },
   "back": "Back",
+  "goHome": "Home",
   "home": {
     "scrollPrev": "Previous tricks",
     "scrollNext": "More tricks",
