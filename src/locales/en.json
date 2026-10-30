@@ -163,9 +163,7 @@
     "recommendedContext": "Recommended for your level"
   },
   "video": {
-    "play": "Play {name}",
-    "others": "Other videos",
-    "offline": "You're offline: the video will play once you're back online."
+    "others": "Other videos"
   },
   "trick": {
     "todo": "To do",

@@ -163,9 +163,7 @@
     "recommendedContext": "レベルに合わせたおすすめ"
   },
   "video": {
-    "play": "{name}を再生",
-    "others": "他の動画",
-    "offline": "オフラインです。オンラインに戻ると動画を再生できます。"
+    "others": "他の動画"
   },
   "trick": {
     "todo": "やる予定",

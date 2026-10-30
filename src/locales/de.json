@@ -163,9 +163,7 @@
     "recommendedContext": "Passend zu deinem Stand"
   },
   "video": {
-    "play": "{name} abspielen",
-    "others": "Weitere Videos",
-    "offline": "Du bist offline: Das Video läuft, sobald du wieder online bist."
+    "others": "Weitere Videos"
   },
   "trick": {
     "todo": "ToDo",

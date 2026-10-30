@@ -163,9 +163,7 @@
     "recommendedContext": "Recommandée pour ton niveau"
   },
   "video": {
-    "play": "Lire {name}",
-    "others": "Autres vidéos",
-    "offline": "Tu es hors ligne : la vidéo se lancera une fois la connexion revenue."
+    "others": "Autres vidéos"
   },
   "trick": {
     "todo": "À travailler",
