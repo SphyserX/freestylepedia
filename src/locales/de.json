@@ -143,6 +143,7 @@
     "placeholder": "Trick suchen"
   },
   "back": "Zurück",
+  "goHome": "Startseite",
   "home": {
     "scrollPrev": "Vorherige Tricks",
     "scrollNext": "Weitere Tricks",

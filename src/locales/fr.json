@@ -143,6 +143,7 @@
     "placeholder": "Rechercher une figure"
   },
   "back": "Retour",
+  "goHome": "Accueil",
   "home": {
     "scrollPrev": "Figures précédentes",
     "scrollNext": "Figures suivantes",

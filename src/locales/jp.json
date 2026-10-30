@@ -143,6 +143,7 @@
     "placeholder": "トリックを検索"
   },
   "back": "戻る",
+  "goHome": "ホーム",
   "home": {
     "scrollPrev": "前のトリック",
     "scrollNext": "次のトリック",
