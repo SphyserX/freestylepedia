@@ -163,7 +163,8 @@
     "recommendedContext": "Polecany dla twojego poziomu"
   },
   "video": {
-    "others": "Inne filmy"
+    "others": "Inne filmy",
+    "offline": "Jesteś offline: film odtworzy się po powrocie połączenia."
   },
   "trick": {
     "todo": "Todo",

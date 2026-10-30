@@ -1,11 +1,32 @@
-import { describe, it, expect } from 'vitest'
+import { afterEach, describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { createI18n } from 'vue-i18n'
 import VideoPlayer from '../../src/components/trick/VideoPlayer.vue'
 
+const i18n = createI18n({ legacy: false, locale: 'en', messages: { en: { video: { offline: 'You are offline' } } } })
 const mountPlayer = (videoId = 'abc') =>
-  mount(VideoPlayer, { props: { videoId, title: 'Hawk Stop' } })
+  mount(VideoPlayer, { props: { videoId, title: 'Hawk Stop' }, global: { plugins: [i18n] } })
 
 describe('VideoPlayer', () => {
+  afterEach(() => { vi.restoreAllMocks() })
+
+  it('offline, says so instead of loading a frame that would show the browser error page', () => {
+    vi.spyOn(navigator, 'onLine', 'get').mockReturnValue(false)
+    const w = mountPlayer()
+    expect(w.find('iframe').exists()).toBe(false)
+    expect(w.get('[role="status"]').text()).toBe('You are offline')
+  })
+
+  it('shows the frame once the connection is back', async () => {
+    const online = vi.spyOn(navigator, 'onLine', 'get').mockReturnValue(false)
+    const w = mountPlayer()
+    online.mockReturnValue(true)
+    window.dispatchEvent(new Event('online'))
+    await w.vm.$nextTick()
+    expect(w.find('iframe').exists()).toBe(true)
+    expect(w.find('[role="status"]').exists()).toBe(false)
+  })
+
   it('shows the YouTube frame right away, with no poster or play button of its own', () => {
     const w = mountPlayer()
     expect(w.find('button').exists()).toBe(false)
